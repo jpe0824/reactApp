@@ -3,10 +3,9 @@ import ReactDOM from "react-dom/client";
 import App from "./App";
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
-// import "yahoo-finance2";
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
-    <App />
+    <App/>
   </React.StrictMode>
 );

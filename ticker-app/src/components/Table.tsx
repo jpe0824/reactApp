@@ -9,26 +9,37 @@ function Table({ data }: TableProps) {
 
   return (
     <>
-      <table className="table">
-        <thead>
-          <tr>
-            <th scope="col">Symbol</th>
-            <th scope="col">Name</th>
-            <th scope="col">Last Price</th>
-            <th scope="col">Change</th>
-          </tr>
-        </thead>
-        <tbody>
-          {data.map((item) => (
-            <tr key={item.symbol}>
-              <td>{item.symbol}</td>
-              <td>{item.name}</td>
-              <td>{item.lastPrice}</td>
-              <td>{item.change}</td>
+      <div className="table-container mx-auto">
+        <table className="table">
+          <thead>
+            <tr>
+              <th scope="col">Symbol</th>
+              <th scope="col">Last Price</th>
+              <th scope="col">Change</th>
+              <th scope="col">Change %</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {data.map((item) => (
+              <tr key={item.symbol}>
+                <td>
+                  <i
+                    className={
+                      item.change.startsWith("-")
+                        ? "bi bi-caret-down-fill text-danger"
+                        : "bi bi-caret-up-fill text-success"
+                    }
+                  ></i>
+                  {item.symbol}
+                </td>
+                <td>{item.lastPrice}</td>
+                <td>{item.change}</td>
+                <td>{item.changePercent}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </>
   );
 }

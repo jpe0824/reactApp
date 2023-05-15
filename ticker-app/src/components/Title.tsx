@@ -90,7 +90,7 @@ function Title({ data, onAddTicker }: TitleProps) {
               <input
                 type="text"
                 className="form-control"
-                placeholder="Ticker symbol"
+                placeholder="Stock symbol i.e. AAPL"
                 aria-label="Ticker symbol"
                 aria-describedby="add-ticker-button"
                 name="symbol"

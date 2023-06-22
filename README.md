@@ -1,2 +1,2 @@
 # reactApp
-React version of MBP site
+React playground
